@@ -18,7 +18,7 @@ alldata <- subset(alldata,Date=="1/2/2007" | Date=="2/2/2007")
 alldata<-within(alldata,{Fulldate <- strptime(paste(Date,Time),
                                               format="%d/%m/%Y %R")})
 #plot
-png(filename = "plot4.png")
+png(filename = "plot4.png",width = 480, height = 480)
 par(mfcol=c(2,2),mar = c(4,4,2,2))
 # top left plot
 with(alldata,plot(Fulldate,as.numeric(Global_active_power),type="l",main="",
